@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Fatema 🎂</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#a18cd1);
+    color:white;
+}
+
+/* PAGES */
+
+.page{
+    width:100%;
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+/* প্রথম পেজ */
+
+#page1{
+    display:flex;
+}
+
+/* BOX */
+
+.box{
+    width:100%;
+    max-width:550px;
+    max-height:92vh;
+    overflow-y:auto;
+
+    padding:30px 22px;
+
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:30px;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:fadeIn 1s ease;
+}
+
+/* FIRST PAGE */
+
+.cake{
+    font-size:80px;
+    animation:bounce 2s infinite;
+}
+
+h1{
+    font-size:43px;
+    margin:15px 0;
+    text-shadow:0 0 15px white;
+}
+
+.name{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.message{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* BUTTON */
+
+button{
+    margin-top:30px;
+    border:0;
+    padding:16px 30px;
+    border-radius:40px;
+
+    background:white;
+    color:#ff4f81;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+/* SECOND PAGE */
+
+.big-text{
+    font-size:38px;
+    font-weight:bold;
+    line-height:1.4;
+    margin-bottom:20px;
+}
+
+.sub-text{
+    font-size:19px;
+    line-height:1.8;
+}
+
+/* SURPRISE */
+
+.gift{
+    font-size:80px;
+    animation:gift 1.5s infinite;
+}
+
+.surprise-title{
+    font-size:38px;
+    margin:15px 0;
+    animation:glow 1s infinite alternate;
+}
+
+.final-birthday{
+    font-size:48px;
+    font-weight:900;
+    line-height:1.2;
+    margin:25px 0;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 20px #ff4f81,
+        0 0 35px #ff4f81;
+}
+
+.friend-message{
+    font-size:19px;
+    line-height:1.8;
+}
+
+.friend-message b{
+    font-size:21px;
+}
+
+/* CONFETTI */
+
+.confetti{
+    position:fixed;
+    top:-30px;
+    font-size:22px;
+    z-index:999;
+    pointer-events:none;
+
+    animation:fall linear forwards;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:scale(.8) translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+@keyframes gift{
+
+    0%,100%{
+        transform:scale(1) rotate(0);
+    }
+
+    50%{
+        transform:scale(1.15) rotate(5deg);
+    }
+
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:0 0 5px white;
+    }
+
+    to{
+        text-shadow:
+            0 0 20px white,
+            0 0 40px white;
+    }
+
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(-30px) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    h1{
+        font-size:34px;
+    }
+
+    .name{
+        font-size:27px;
+    }
+
+    .message{
+        font-size:16px;
+    }
+
+    .big-text{
+        font-size:29px;
+    }
+
+    .sub-text{
+        font-size:16px;
+    }
+
+    .gift{
+        font-size:65px;
+    }
+
+    .surprise-title{
+        font-size:32px;
+    }
+
+    .final-birthday{
+        font-size:38px;
+    }
+
+    .friend-message{
+        font-size:17px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     PAGE 1
+========================= -->
+
+<section id="page1" class="page">
+
+    <div class="box">
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+        <div class="name">
+            🎉 Fatema 🎉
+        </div>
+
+        <div class="message">
+
+            আজকের এই বিশেষ দিনে তোমার জন্য
+            রইলো অনেক অনেক শুভকামনা। 💐
+
+            <br><br>
+
+            তোমার জীবনের প্রতিটি দিন
+            হাসি, আনন্দ আর সুন্দর মুহূর্তে
+            ভরে উঠুক। ✨
+
+            <br><br>
+
+            তোমার সব সুন্দর স্বপ্ন পূরণ হোক
+            এবং তোমার মুখের হাসিটা
+            সবসময় এমনই থাকুক। 🌸
+
+        </div>
+
+        <button onclick="goPage2()">
+            💖 Click Fatema 💖
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 2
+========================= -->
+
+<section id="page2" class="page">
+
+    <div class="box">
+
+        <div style="font-size:70px;">
+            🌸✨🌸
+        </div>
+
+        <div class="big-text">
+            শুভ জন্মদিন ফাতেমা! 🎂
+        </div>
+
+        <div class="sub-text">
+
+            তোমার জন্য রইলো হৃদয় থেকে
+            অনেক অনেক শুভকামনা। 💐
+
+            <br><br>
+
+            আল্লাহ তোমার জীবনকে
+            সুখ, শান্তি ও আনন্দে ভরিয়ে দিন।
+
+            তোমার প্রতিটি নতুন দিন
+            আগের দিনের চেয়েও সুন্দর হোক। 🤲✨
+
+            <br><br>
+
+            আজকের দিনটা শুধু তোমার জন্য—
+            তাই হাসিখুশি থেকো এবং
+            সুন্দর একটা দিন উপভোগ করো। 💖
+
+        </div>
+
+        <button onclick="showSurprise()">
+            🎁 Click For Surprise 🎁
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL PAGE
+========================= -->
+
+<section id="surprise" class="page">
+
+    <div class="box">
+
+        <div class="gift">
+            🎁
+        </div>
+
+        <div class="surprise-title">
+            🎉 SURPRISE! 🎉
+        </div>
+
+        <div class="final-birthday">
+
+            HAPPY BIRTHDAY
+            <br>
+            FATEMA 🎂🎉
+
+        </div>
+
+        <div class="friend-message">
+
+            আজকের এই বিশেষ দিনে তোমাকে জানাই
+            অনেক অনেক শুভ জন্মদিনের শুভেচ্ছা। 💐
+
+            <br><br>
+
+            তুমি আমার একজন ভালো বন্ধু,
+            তাই তোমার এই বিশেষ দিনটা
+            একটু সুন্দর করে মনে রাখার জন্য
+            এই ছোট্ট সারপ্রাইজটা। 😊✨
+
+            <br><br>
+
+            তোমার জীবনের প্রতিটি দিন
+            হাসি, আনন্দ আর সুন্দর মুহূর্তে
+            ভরে উঠুক। 🌸
+
+            <br><br>
+
+            তোমার সব ভালো চাওয়া পূরণ হোক,
+            জীবনে অনেক সুন্দর সুন্দর মুহূর্ত আসুক
+            এবং সবসময় হাসিখুশি থেকো। 💖✨
+
+            <br><br>
+
+            আমাদের বন্ধুত্বটা সবসময়
+            সুন্দর থাকুক। 🤝🌸
+
+            <br><br>
+
+            <b>
+                তোমার বন্ধু থেকে — 💌
+                <br>
+                HAPPY BIRTHDAY FATEMA! 🎂🎉
+            </b>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   PAGE 1 → PAGE 2
+========================= */
+
+function goPage2(){
+
+    document.getElementById("page1").style.display = "none";
+
+    document.getElementById("page2").style.display = "flex";
+
+}
+
+
+/* =========================
+   PAGE 2 → FINAL PAGE
+========================= */
+
+function showSurprise(){
+
+    document.getElementById("page2").style.display = "none";
+
+    document.getElementById("surprise").style.display = "flex";
+
+
+    /* CONFETTI */
+
+    for(let i = 0; i < 100; i++){
+
+        setTimeout(function(){
+
+            createConfetti();
+
+        }, i * 30);
+
+    }
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(){
+
+    const confetti =
+        document.createElement("div");
+
+    confetti.className = "confetti";
+
+
+    const items = [
+        "🎉",
+        "🎊",
+        "✨",
+        "💖",
+        "⭐",
+        "🌸",
+        "🎈",
+        "💐"
+    ];
+
+
+    confetti.innerHTML =
+        items[
+            Math.floor(
+                Math.random() * items.length
+            )
+        ];
+
+
+    confetti.style.left =
+        Math.random() * 100 + "vw";
+
+
+    confetti.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+
+    document.body.appendChild(confetti);
+
+
+    setTimeout(function(){
+
+        confetti.remove();
+
+    },7000);
+
+}
+
+</script>
+
+</body>
+</html>
