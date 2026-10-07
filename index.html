@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nisha ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+
+    background:
+        radial-gradient(circle at top left, #ff9a9e 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #c471ed 0%, transparent 40%),
+        linear-gradient(135deg, #ff758c, #ff7eb3);
+
+    position: relative;
+}
+
+/* Floating Hearts */
+
+.heart-float {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    opacity: 0.7;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* Main Card */
+
+.card {
+    width: 90%;
+    max-width: 430px;
+    min-height: 500px;
+    max-height: 90vh;
+
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+
+    animation: cardIn 1s ease;
+
+    overflow: hidden;
+}
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* Screen System */
+
+.screen {
+    width: 100%;
+    display: none;
+    animation: screenIn 0.8s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+@keyframes screenIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(30px);
+    }
+
+    60% {
+        transform: scale(1.05) translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* Leaving Animation */
+
+.screen.leaving {
+    animation: screenOut 0.45s ease forwards;
+}
+
+@keyframes screenOut {
+
+    to {
+        opacity: 0;
+        transform: scale(0.7) translateY(-30px);
+    }
+}
+
+
+/* Heart */
+
+.big-heart {
+    font-size: 75px;
+    margin-bottom: 15px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* Buttons */
+
+button {
+    margin-top: 28px;
+
+    padding: 14px 32px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: white;
+    color: #ff4f81;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.04);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+
+/* Images */
+
+.love-pic {
+
+    width: 110px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+    margin: 15px auto 20px;
+
+    animation: picIn 1s ease;
+}
+
+@keyframes picIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotate(-20deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+/* Image Screens */
+
+.second-pic {
+
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border: 4px solid white;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    margin: 15px auto 20px;
+
+    animation: secondPicIn 1.2s ease;
+}
+
+@keyframes secondPicIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.4) rotate(8deg);
+    }
+
+    60% {
+        transform: scale(1.08) rotate(-2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+/* Video */
+
+.love-video {
+
+    width: 100%;
+    max-width: 340px;
+    max-height: 300px;
+
+    border-radius: 22px;
+
+    border: 4px solid white;
+
+    background: #000;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    margin: 10px auto 15px;
+}
+
+
+.love-text {
+
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+.final-love {
+
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-top: 18px;
+
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+
+    from {
+        text-shadow: 0 0 5px white;
+    }
+
+    to {
+        text-shadow:
+            0 0 10px white,
+            0 0 20px #ffb6c1;
+    }
+}
+
+
+.small {
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   LAST MESSAGE
+========================= */
+
+#screen8 {
+
+    max-height: calc(90vh - 20px);
+
+    overflow-y: auto;
+
+    padding: 10px 8px 30px;
+
+    scroll-behavior: smooth;
+}
+
+
+/* Scrollbar */
+
+#screen8::-webkit-scrollbar {
+    width: 5px;
+}
+
+#screen8::-webkit-scrollbar-thumb {
+
+    background: rgba(255,255,255,0.55);
+
+    border-radius: 10px;
+}
+
+
+.last-title {
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+.last-message {
+
+    width: 100%;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    text-align: left;
+}
+
+
+.last-message p {
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+.last-love {
+
+    text-align: center;
+
+    font-size: 24px !important;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+    animation: glow 1.5s infinite alternate;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- Floating Hearts -->
+
+<div class="heart-float"
+     style="left:8%; animation-duration:7s;">
+    ❤️
+</div>
+
+<div class="heart-float"
+     style="left:20%; animation-duration:9s; animation-delay:2s;">
+    💗
+</div>
+
+<div class="heart-float"
+     style="left:35%; animation-duration:8s; animation-delay:1s;">
+    💕
+</div>
+
+<div class="heart-float"
+     style="left:55%; animation-duration:10s; animation-delay:3s;">
+    💖
+</div>
+
+<div class="heart-float"
+     style="left:72%; animation-duration:7s; animation-delay:2s;">
+    💝
+</div>
+
+<div class="heart-float"
+     style="left:88%; animation-duration:9s;">
+    ❤️
+</div>
+
+
+
+<div class="card">
+
+
+<!-- SCREEN 1 -->
+
+<section class="screen active" id="screen1">
+
+    <div class="big-heart">
+        💗
+    </div>
+
+    <h1>
+        নিসহা 💕
+    </h1>
+
+    <p>
+        তোমাকে একটা কথা বলার ছিল... 🥺
+        <br>
+        তুমি আমার কাছে অনেক বেশি বিশেষ। ❤️
+    </p>
+
+    <button onclick="nextScreen(2)">
+        Next 💕
+    </button>
+
+</section>
+
+
+
+<!-- SCREEN 2 -->
+
+<section class="screen" id="screen2">
+
+    <div class="big-heart">
+        🥰
+    </div>
+
+    <h1>
+        একটা কথা বলি? 💖
+    </h1>
+
+    <p>
+
+        জানো তুমি আমার কাছে কতটা গুরুত্বপূর্ণ? 🥹
+
+        <br><br>
+
+        তোমার সাথে কাটানো ছোট ছোট মুহূর্তগুলোও
+        আমার কাছে অনেক সুন্দর স্মৃতি। 🌸
+
+    </p>
+
+    <button onclick="nextScreen(3)">
+        Next 💞
+    </button>
+
+</section>
+
+
+
+<!-- SCREEN 3 -->
+
+<section class="screen" id="screen3">
+
+    <div class="big-heart">
+        💝
+    </div>
+
+    <h1>
+        জান রে 😭❤️
+    </h1>
+
+    <p>
+
+        জান রে আমার আর তোর কত না কাহিনি 😭
+
+        <br>
+
+        চল স্মৃতি মনে করা যাক ❤️
+
+    </p>
+
+    <button onclick="nextScreen(4)">
+        Click Me ❤️
+    </button>
+
+</section>
+
+
+
+<!-- SCREEN 4 -->
+
+<section class="screen" id="screen4">
+
+    <div class="big-heart">
+        🥹❤️
+    </div>
+
+    <h1>
+        নিসহা 🥺
+    </h1>
+
+    <img
+        src="nisha.jpg"
+        class="love-pic"
+        alt="Nisha"
+    >
+
+    <div class="love-text">
+
+        এটা দেখলে আমার এখনও কান্না পায় 😭
+
+        <br>
+
+        আমি সত্যি তোমাকে অনেক ভালোবাসি। ❤️
+
+        <br>
+
+        তোমার হাসিটা যেন সবসময় এমনই থাকে। 🌸
+
+    </div>
+
+    <div class="final-love">
+        LOVE YOU NISHA ❤️
+    </div>
+
+    <div class="small">
+        BABYR AMMU 😘💞
+    </div>
+
+    <button onclick="nextScreen(5)">
+        Next 💖
+    </button>
+
+</section>
+
+
+
+<!-- SCREEN 5 -->
+
+<section class="screen" id="screen5">
+
+    <div class="big-heart">
+        💖
+    </div>
+
+    <h1>
+        আমাদের আরেকটা স্মৃতি 🥹❤️
+    </h1>
+
+    <img
+        src="jj.jpg"
+        class="second-pic"
+        alt="Our Memory"
+    >
+
+    <div class="love-text">
+
+        এই ছবিটাও আমার কাছে অনেক স্পেশাল। 🥹
+
+        <br>
+
+        কিছু মুহূর্ত ছবি হয়ে থাকে,
+        আর কিছু মুহূর্ত মনে থেকে যায়। ❤️
+
+    </div>
+
+    <div class="final-love">
+        ALWAYS SPECIAL 💕
+    </div>
+
+    <button onclick="nextScreen(6)">
+        Next 💖
+    </button>
+
+</section>
+
+
+
+<!-- SCREEN 6 -->
+
+<section class="screen" id="screen6">
+
+    <div class="big-heart">
+        💖
+    </div>
+
+    <h1>
+        আরেকটা সুন্দর স্মৃতি 🥹❤️
+    </h1>
+
+    <img
+        src="IMG20260609202827.jpg"
+        class="second-pic"
+        alt="Our Memory"
+    >
+
+    <div class="love-text">
+
+        এই ছবিটাও আমাদের জন্য অনেক স্পেশাল। 🥹
+
+        <br>
+
+        এই মুহূর্তটা সবসময় মনে থাকবে। ❤️
+
+    </div>
+
+    <div class="final-love">
+        ALWAYS SPECIAL 💕
+    </div>
+
+    <button onclick="nextScreen(7)">
+        Next 🎬
+    </button>
+
+</section>
+
+
+
+<!-- SCREEN 7 — VIDEO -->
+
+<section class="screen" id="screen7">
+
+    <div class="big-heart">
+        🎬❤️
+    </div>
+
+    <h1>
+        এবার একটা ভিডিও 🥹❤️
+    </h1>
+
+    <video
+        class="love-video"
+        controls
+        playsinline
+        preload="metadata"
+    >
+
+        <source
+            src="lv_7636669824189385991_20260607142234.mp4"
+            type="video/mp4"
+        >
+
+        তোমার ব্রাউজার ভিডিও সাপোর্ট করে না।
+
+    </video>
+
+    <p>
+        আমাদের জীবনের প্রথম ডেট 😭
+    </p>
+
+    <div class="final-love">
+        LOVE YOU NISHA ❤️
+    </div>
+
+    <button onclick="nextScreen(8)">
+        Next 💌
+    </button>
+
+</section>
+
+
+
+<!-- SCREEN 8 — LAST MESSAGE -->
+
+<section class="screen" id="screen8">
+
+    <div class="big-heart">
+        💌❤️
+    </div>
+
+    <h1 class="last-title">
+        নিসহা 🥺❤️
+    </h1>
+
+
+    <div class="last-message">
+
+
+        <p>
+            নিসহা, আসলে কীভাবে বলব আমি নিজেও জানি না… কিন্তু একটা কথা সত্যি—আমি তোমাকে অসম্ভব ভালোবাসি। 😭❤️
+        </p>
+
+
+        <p>
+            তুমি আমার জন্য যত কিছু করেছো, যতটা কষ্ট সহ্য করেছো, যত জায়গায় আমার জন্য দাঁড়িয়েছো—সবকিছু আমি হয়তো কোনোদিন পুরোপুরি মূল্য দিয়ে শোধ করতে পারব না। শুধু একটা কথা মনে রেখো, তোমার এই ভালোবাসা আর ত্যাগ আমি কখনোই ভুলব না। 🥹❤️
+        </p>
+
+
+        <p>
+            আমি চাই তুমি সবসময় আমার পাশে থাকো। জীবনে যত সমস্যাই আসুক, যত কঠিন সময়ই আসুক, আমরা দুজন একসাথে থাকব। আমি তোমাকে ছেড়ে যেতে চাই না, আর তোমাকেও হাল ছেড়ে দিতে বলব না। 😭
+        </p>
+
+
+        <p>
+            আর কিছুদিন… তারপর ইনশাআল্লাহ আমাদের সেই সুন্দর দিনটা আসবে। যেদিন তোমাকে নিজের করে নিয়ে সারাজীবন পাশে রাখব। তোমাকে ভালো রাখার জন্য, তোমার মুখে হাসি রাখার জন্য আমি আমার সর্বোচ্চ চেষ্টা করব। তুমি আমার কাছে সত্যিই অনেক বেশি গুরুত্বপূর্ণ। ❤️
+        </p>
+
+
+        <p>
+            তুমি এতদিন অনেক কষ্ট সহ্য করেছো, জানি। আর একটু শক্ত থেকো, লক্ষ্মী বউ আমার। 🥺❤️ সামনে আমাদের জন্য আরও সুন্দর সময় অপেক্ষা করছে—এই বিশ্বাসটা রেখো।
+        </p>
+
+
+        <p>
+            আর একটা কথা… জীবনে তুমি যাই করো, আমার সাথে কখনো প্রতারণা কোরো না। আমি তোমাকে খুব বিশ্বাস করি। এই বিশ্বাসটা যেন কোনোদিন ভেঙে না যায়। 😭❤️
+        </p>
+
+
+        <p>
+            আমি তোমার কষ্ট বুঝতে চাই, তোমার পাশে থাকতে চাই, তোমার হাসির কারণ হতে চাই।
+        </p>
+
+
+        <p>
+            আমি তোমাকে সত্যিই অসম্ভব ভালোবাসি। 😭❤️
+            <br>
+            সবসময় তোমার পাশে থাকতে চাই।
+        </p>
+
+
+        <p class="last-love">
+            LOVE YOU, LOKKI BOU AMAR ❤️🥺
+        </p>
+
+
+        <p>
+            এই মেসেজটা লিখতে লিখতে সত্যি আমার চোখ দিয়ে একবারের জন্যও পানি থামেনি… 😭
+            <br>
+            কারণ তুমি আমার কাছে শুধু একজন মানুষ নও—তুমি আমার জীবনের খুব বিশেষ একজন। ❤️
+            
+            সারা জীবন আমার পাশে থাকবে তো জান 
+        </p>
+
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+/* Screen Change */
+
+function nextScreen(number) {
+
+    const current =
+        document.querySelector(".screen.active");
+
+    const next =
+        document.getElementById("screen" + number);
+
+    if (!current || !next) {
+        return;
+    }
+
+    current.classList.add("leaving");
+
+    setTimeout(function() {
+
+        current.classList.remove("active");
+
+        current.classList.remove("leaving");
+
+        next.classList.add("active");
+
+        /* Last message screen হলে একদম উপরে যাবে */
+        if (number === 8) {
+            next.scrollTop = 0;
+        }
+
+    }, 450);
+}
+
+</script>
+
+</body>
+</html>
